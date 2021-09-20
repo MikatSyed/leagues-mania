@@ -31,7 +31,7 @@ const LeagueDetails = () => {
                 <Header banner={league.strFanart2} logo={league.strBadge} />
                 <div className="container d-flex justify-content-center align-items-center  mt-5 ">
                     <div className="row bg-light mb-5 main_card">
-                        <div className="col-md-6 col-sm-12  row align-items-center league_card ">
+                        <div className="col-md-6 col-sm-12 row align-items-center league_card ">
                             <h1 className="">{strLeague}</h1>
                             <h3 className="" > <FoundationIcon /> Founded : {dateFirstEvent}</h3>
                             <h3 className=""> <FlagIcon/> Country : {strCountry}</h3>
