@@ -1,0 +1,26 @@
+
+.card {
+    
+   
+    min-width: 200px;
+   
+  }
+  
+  .card-body {
+    padding: 2rem 0 !important;
+  }
+  
+  .card-text {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .overflow {
+    overflow: hidden;
+  }
+  .overflow img{
+    width: 40%;
+    margin-top: 10px;
+  }
+  
+  

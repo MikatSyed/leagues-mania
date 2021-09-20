@@ -1,0 +1,50 @@
+.photo img {
+    width: 100%;
+   height: 70%;
+  
+  
+}
+
+@media only screen and (max-width: 768px) {
+    .photo img {
+        width: 100%;
+       height: 100%;
+     margin-left: 15px;
+  
+      
+      
+    }
+  }
+
+.league_main{
+    background-color:  rgb(17, 1, 53);
+}
+
+.main_card{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    margin: 5px !important;
+}
+.league_card{
+    width: 100%;
+    height: 350px;
+    margin-top: 50px !important;
+    margin-left: 20px !important;
+}
+
+.league_card h1{ 
+   
+    font-size: 30px;
+    font-weight: bold;
+    color:  rgb(17, 1, 53);
+}
+.league_card h3{ 
+    font-size: 23px;
+    font-weight: bold;
+    color:  rgb(17, 1, 53);
+}
+footer img{
+    height: 60px;
+    margin-bottom: 50px;
+}
