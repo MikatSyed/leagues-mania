@@ -20,20 +20,20 @@ const LeagueDetails = () => {
     const [league, setLeague] = useState({})
     const { leagueId } = useParams();
     useEffect(() => {
-        const api = `https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${leagueId}`
+        const api = `https://www.thesportsdb.com/api/v1/json/2/lookup_all_teams.php?id=${leagueId}`
         axios(api)
-            .then(data => setLeague(data.data.leagues[0]))
+            .then(data => setLeague(data.data.teams[0]))
     }, [])
-    let { dateFirstEvent, strCountry, strSport, strGender, strLeague, strDescriptionEN, strYoutube, strTwitter, strFacebook } = league;
+    let { intFormedYear, strCountry, strSport, strGender, strLeague, strDescriptionEN, strYoutube, strTwitter, strFacebook } = league;
     return (
         <>
             <div className="league_main">
-                <Header banner={league.strFanart2} logo={league.strBadge} />
+                <Header banner={league.strTeamFanart2} logo={league.strTeamBadge} />
                 <div className="container d-flex justify-content-center align-items-center  mt-5 ">
                     <div className="row bg-light mb-5 main_card">
                         <div className="col-md-6 col-sm-12 row align-items-center league_card ">
                             <h1 className="">{strLeague}</h1>
-                            <h3 className="" > <FoundationIcon /> Founded : {dateFirstEvent}</h3>
+                            <h3 className="" > <FoundationIcon /> Founded : {intFormedYear}</h3>
                             <h3 className=""> <FlagIcon/> Country : {strCountry}</h3>
                             <h3 className=""> <SportsSoccerIcon/> Sport Type : {strSport}</h3>
                             

@@ -10,14 +10,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const Card = ({name,type,id}) => {
     const [image,setImage] = useState([])
     useEffect(()=> {
-     const api = `https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${id}`
+     const api = `https://www.thesportsdb.com/api/v1/json/2/lookup_all_teams.php?id=${id}`
      axios(api)
-     .then(data => setImage( data.data.leagues[0]))
+     .then(data => setImage( data.data.teams[0]))
     },[])
     return (
         <div className="card text-center bg-light ">
         <div className="overflow">
-          <img src={image.strBadge} alt="a wallpaper"  />
+          <img src={image.strTeamBadge} alt="a wallpaper"  />
         </div>
         <div className="card-body text-light">
           <h4 className="text-dark">{name}</h4>

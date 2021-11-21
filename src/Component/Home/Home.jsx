@@ -9,9 +9,9 @@ import './Home.css'
 const Home = () => {
     const[leagues,setLeagues] = useState([]);
     useEffect(()=>{
-     const api = `https://www.thesportsdb.com/api/v1/json/1/all_leagues.php`
+     const api = `https://www.thesportsdb.com/api/v1/json/2/all_leagues.php`
      axios(api)
-    .then(data => setLeagues(data.data.leagues.slice(0,60)))
+    .then(data => setLeagues(data.data.leagues.slice(0,21)))
 
     },[])
     return (
